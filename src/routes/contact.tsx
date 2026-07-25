@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { Clock, Mail, MapPin, Phone, Send } from "lucide-react";
+import { Clock, Mail, MapPin, Phone, Send, ShieldCheck, Sparkles } from "lucide-react";
 import { toast } from "sonner";
 import bannerContact from "@/assets/contact-hero-image.jpg";
 import { PageBanner } from "@/components/site/PageBanner";
@@ -28,14 +28,14 @@ export const Route = createFileRoute("/contact")({
 });
 
 const details = [
-  { icon: MapPin, label: "Office", value: "1201 Corporate Way, Suite 400, Dallas, TX 75201" },
-  { icon: Phone, label: "Phone", value: "+1 800 555 0142" },
-  { icon: Mail, label: "Email", value: "talent@tpntech.com" },
-  { icon: Clock, label: "Hours", value: "Mon – Fri, 8:00 – 19:00 CT" },
+  { icon: MapPin, label: "Global HQ Office", value: "1201 Corporate Way, Suite 400, Dallas, TX 75201" },
+  { icon: Phone, label: "Direct Client Line", value: "+1 800 555 0142" },
+  { icon: Mail, label: "Dedicated Email Desk", value: "talent@tpntech.com" },
+  { icon: Clock, label: "Operating Hours", value: "Mon – Fri, 8:00 – 19:00 CT (24/7 SLA Support)" },
 ];
 
 const inputClass =
-  "w-full rounded-xl border border-border bg-card px-4 py-3 text-sm text-foreground outline-hidden transition-all duration-300 placeholder:text-muted-foreground/70 focus:border-gold focus:ring-2 focus:ring-gold/25";
+  "w-full rounded-xl border border-gold/30 bg-[#091124] px-4 py-3 text-sm text-primary-foreground outline-none transition-all duration-300 placeholder:text-primary-foreground/50 focus:border-gold focus:ring-2 focus:ring-gold/30 shadow-inner";
 
 function ContactPage() {
   const [sending, setSending] = useState(false);
@@ -47,8 +47,8 @@ function ContactPage() {
     window.setTimeout(() => {
       setSending(false);
       form.reset();
-      toast.success("Enquiry received", {
-        description: "A TPN Tech specialist will reply within one business day.",
+      toast.success("Enquiry received successfully!", {
+        description: "A TPN Tech executive partner will review your requirements and reply within 1 business hour.",
       });
     }, 700);
   };
@@ -62,94 +62,172 @@ function ContactPage() {
         description="One calibration call is enough to start. Share the requirement, the timeline and the constraints — we will tell you honestly what is achievable."
       />
 
-      <section className="py-24">
-        <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr]">
-          <div>
-            <SectionHeading
-              align="left"
-              eyebrow="Reach us"
-              title="Direct lines, no call centre"
-              description="Your enquiry goes straight to a recruiting lead, not a shared inbox."
-            />
-            <div className="mt-10 space-y-4">
-              {details.map((d, i) => (
-                <Reveal key={d.label} delay={i * 100} variant="left">
-                  <div className="group flex gap-4 rounded-2xl border border-border bg-card p-5 transition-all duration-500 ease-[var(--ease-premium)] hover:-translate-y-1 hover:border-gold/45 hover:shadow-soft">
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gold/12 text-gold transition-transform duration-500 group-hover:scale-110">
-                      <d.icon className="h-5 w-5" />
-                    </span>
-                    <div>
-                      <p className="eyebrow text-muted-foreground">{d.label}</p>
-                      <p className="mt-1.5 text-sm text-foreground/85">{d.value}</p>
+      {/* ━━━ CONTACT FORM SECTION WITH RICH BACKGROUND IMAGE & DARK GLASS CARDS ━━━ */}
+      <section className="relative overflow-hidden py-28 bg-navy-deep text-primary-foreground border-y border-gold/20">
+        {/* Background Image Overlay with Sharp Vignette */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <img
+            src={bannerContact}
+            alt="TPN Tech Contact Office"
+            className="w-full h-full object-cover opacity-35 scale-105"
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(135deg, rgba(9, 17, 36, 0.92) 0%, rgba(12, 22, 44, 0.88) 50%, rgba(9, 17, 36, 0.95) 100%)",
+            }}
+          />
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-5 z-10">
+          <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+            {/* LEFT COLUMN: REACH US & EXECUTIVE DESK DETAILS */}
+            <div>
+              <SectionHeading
+                tone="light"
+                align="left"
+                eyebrow="Reach us directly"
+                title="Direct lines, no call centres"
+                description="Your enquiry goes straight to a named partner recruiter, not an automated queue."
+              />
+
+              <div className="mt-10 space-y-4">
+                {details.map((d, i) => (
+                  <Reveal key={d.label} delay={i * 100} variant="left">
+                    <div className="group flex items-center gap-5 rounded-2xl border border-gold/30 bg-[#0c162c]/90 p-5 backdrop-blur-md transition-all duration-500 ease-[var(--ease-premium)] hover:-translate-y-1.5 hover:border-gold hover:bg-[#122144] hover:shadow-[0_0_30px_rgba(212,175,55,0.35)]">
+                      <div
+                        className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-navy-deep shadow-[0_0_15px_rgba(212,175,55,0.5)] transition-transform duration-500 group-hover:scale-110"
+                        style={{ background: "var(--gradient-gold)" }}
+                      >
+                        <d.icon className="h-6 w-6 stroke-[2.5]" />
+                      </div>
+                      <div>
+                        <p className="font-mono text-xs font-semibold uppercase tracking-wider text-gold">
+                          {d.label}
+                        </p>
+                        <p className="mt-1 text-sm font-semibold text-primary-foreground/90">
+                          {d.value}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-
-          <Reveal variant="zoom" delay={120}>
-            <form
-              onSubmit={handleSubmit}
-              className="rounded-3xl border border-border bg-card p-8 shadow-soft sm:p-10"
-            >
-              <h2 className="text-2xl text-navy">Send an enquiry</h2>
-              <p className="mt-2 text-sm text-muted-foreground">Fields marked with an asterisk are required.</p>
-
-              <div className="mt-8 grid gap-5 sm:grid-cols-2">
-                <label className="block">
-                  <span className="eyebrow text-muted-foreground">Full name *</span>
-                  <input required name="name" placeholder="Jane Whitfield" className={`mt-2 ${inputClass}`} />
-                </label>
-                <label className="block">
-                  <span className="eyebrow text-muted-foreground">Work email *</span>
-                  <input
-                    required
-                    type="email"
-                    name="email"
-                    placeholder="jane@company.com"
-                    className={`mt-2 ${inputClass}`}
-                  />
-                </label>
-                <label className="block">
-                  <span className="eyebrow text-muted-foreground">Company</span>
-                  <input name="company" placeholder="Company name" className={`mt-2 ${inputClass}`} />
-                </label>
-                <label className="block">
-                  <span className="eyebrow text-muted-foreground">Service needed</span>
-                  <select name="service" className={`mt-2 ${inputClass}`} defaultValue="">
-                    <option value="">Select a service</option>
-                    {services.map((s) => (
-                      <option key={s.slug} value={s.slug}>
-                        {s.title}
-                      </option>
-                    ))}
-                  </select>
-                </label>
+                  </Reveal>
+                ))}
               </div>
 
-              <label className="mt-5 block">
-                <span className="eyebrow text-muted-foreground">How can we help? *</span>
-                <textarea
-                  required
-                  name="message"
-                  rows={5}
-                  placeholder="Tell us about the roles, timeline and team context."
-                  className={`mt-2 resize-none ${inputClass}`}
-                />
-              </label>
+              {/* Executive Response Guarantee Card */}
+              <Reveal delay={450} variant="left">
+                <div className="mt-8 rounded-2xl border border-gold/40 bg-gradient-to-r from-gold/15 via-gold/5 to-transparent p-6 backdrop-blur-md">
+                  <div className="flex items-center gap-3 mb-2">
+                    <ShieldCheck className="h-5 w-5 text-gold stroke-[2.5]" />
+                    <h4 className="text-base font-bold text-gold">1-Hour SLA Guarantee</h4>
+                  </div>
+                  <p className="text-xs text-primary-foreground/80 leading-relaxed">
+                    Enterprise mandates submitted before 17:00 CT receive a dedicated recruiter calibration call within 60 minutes.
+                  </p>
+                </div>
+              </Reveal>
+            </div>
 
-              <button
-                type="submit"
-                disabled={sending}
-                className="sheen-on-hover group mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-navy-deep shadow-gold transition-transform duration-300 hover:scale-[1.02] disabled:opacity-70"
-                style={{ background: "var(--gradient-gold)" }}
+            {/* RIGHT COLUMN: HIGH-CONTRAST DARK GLASS ENQUIRY FORM */}
+            <Reveal variant="zoom" delay={120}>
+              <form
+                onSubmit={handleSubmit}
+                className="rounded-3xl border-2 border-gold/40 bg-gradient-to-br from-[#0c162c] via-[#0f1d3b] to-[#172a54] p-8 sm:p-10 shadow-[0_0_50px_rgba(212,175,55,0.25)] backdrop-blur-xl relative overflow-hidden"
               >
-                {sending ? "Sending…" : "Send enquiry"}
-                <Send className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </button>
-            </form>
-          </Reveal>
+                <div className="flex items-center justify-between mb-2">
+                  <h2 className="text-3xl font-bold text-primary-foreground">Send an Enquiry</h2>
+                  <Sparkles className="h-6 w-6 text-gold animate-pulse" />
+                </div>
+                <p className="text-sm text-primary-foreground/75 mb-8">
+                  Fill out your talent needs below. Fields marked with an asterisk (<span className="text-gold">*</span>) are required.
+                </p>
+
+                <div className="grid gap-6 sm:grid-cols-2">
+                  <label className="block">
+                    <span className="font-mono text-xs font-semibold tracking-wider text-gold uppercase">
+                      Full Name *
+                    </span>
+                    <input
+                      required
+                      name="name"
+                      placeholder="e.g. Sarah Jenkins"
+                      className={`mt-2 ${inputClass}`}
+                    />
+                  </label>
+
+                  <label className="block">
+                    <span className="font-mono text-xs font-semibold tracking-wider text-gold uppercase">
+                      Work Email *
+                    </span>
+                    <input
+                      required
+                      type="email"
+                      name="email"
+                      placeholder="sarah@company.com"
+                      className={`mt-2 ${inputClass}`}
+                    />
+                  </label>
+
+                  <label className="block">
+                    <span className="font-mono text-xs font-semibold tracking-wider text-gold uppercase">
+                      Company Name
+                    </span>
+                    <input
+                      name="company"
+                      placeholder="e.g. Acme Corporation"
+                      className={`mt-2 ${inputClass}`}
+                    />
+                  </label>
+
+                  <label className="block">
+                    <span className="font-mono text-xs font-semibold tracking-wider text-gold uppercase">
+                      Service Requirement
+                    </span>
+                    <select name="service" className={`mt-2 ${inputClass}`} defaultValue="">
+                      <option value="" className="bg-[#0c162c] text-primary-foreground">
+                        Select a service model
+                      </option>
+                      {services.map((s) => (
+                        <option key={s.slug} value={s.slug} className="bg-[#0c162c] text-primary-foreground">
+                          {s.title}
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+                </div>
+
+                <label className="mt-6 block">
+                  <span className="font-mono text-xs font-semibold tracking-wider text-gold uppercase">
+                    How Can We Help? *
+                  </span>
+                  <textarea
+                    required
+                    name="message"
+                    rows={4}
+                    placeholder="Describe the roles, required tech stack, timeline, or headcount goals..."
+                    className={`mt-2 resize-none ${inputClass}`}
+                  />
+                </label>
+
+                <button
+                  type="submit"
+                  disabled={sending}
+                  className="sheen-on-hover group mt-8 inline-flex w-full items-center justify-center gap-3 rounded-full px-8 py-4 text-sm font-bold text-navy-deep shadow-gold transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70"
+                  style={{ background: "var(--gradient-gold)" }}
+                >
+                  {sending ? (
+                    "Transmitting Enquiry…"
+                  ) : (
+                    <>
+                      Submit Talent Enquiry
+                      <Send className="h-4 w-4 stroke-[2.5] transition-transform duration-300 group-hover:translate-x-1" />
+                    </>
+                  )}
+                </button>
+              </form>
+            </Reveal>
+          </div>
         </div>
       </section>
     </div>
