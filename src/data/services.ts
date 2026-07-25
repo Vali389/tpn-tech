@@ -87,6 +87,7 @@ export const services: Service[] = [
     ],
     outcomes: ["Role-specific technical vetting", "Coverage across 40+ tech disciplines", "Replacement guarantee on every placement"],
   },
+  /* ━━━ COMMENTED OUT SERVICES AS REQUESTED ━━━
   {
     slug: "permanent-hiring",
     title: "Permanent Hiring",
@@ -136,7 +137,6 @@ export const services: Service[] = [
     ],
     outcomes: ["Deployment in as little as 5 days", "Zero compliance overhead for you", "Flexible extension and exit terms"],
   },
-  /* ━━━ COMMENTED OUT SERVICES AS REQUESTED ━━━
   {
     slug: "executive-search",
     title: "Executive Search",
