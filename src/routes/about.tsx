@@ -139,7 +139,8 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* ━━━ OUR JOURNEY (ULTRA-MODERN INTERACTIVE STEPPER) ━━━ */}
+      {/* ━━━ OUR JOURNEY (COMMENTED OUT AS REQUESTED) ━━━ */}
+      {/* 
       <section className="py-28 bg-gradient-to-br from-[#091124] via-[#0e1b38] to-[#091124] text-primary-foreground relative overflow-hidden border-b border-white/10">
         <div
           className="absolute inset-0 opacity-25 pointer-events-none"
@@ -155,7 +156,6 @@ function AboutPage() {
           />
 
           <div className="relative mt-24">
-            {/* Glowing horizontal gold connecting line */}
             <div className="hidden lg:block absolute top-[28px] left-[8%] right-[8%] h-0.5 bg-gradient-to-r from-gold/20 via-gold to-gold/20 z-0 shadow-[0_0_20px_rgba(212,175,55,0.8)]" />
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 relative z-10">
@@ -163,7 +163,6 @@ function AboutPage() {
                 <Reveal key={t.year} delay={i * 120}>
                   <div className="group h-full flex flex-col justify-between rounded-2xl border-t-4 border-t-gold border-x border-b border-white/15 bg-gradient-to-br from-[#0c162c] via-[#0f1d3b] to-[#172a54] backdrop-blur-md p-8 shadow-xl transition-all duration-500 ease-[var(--ease-premium)] hover:-translate-y-3 hover:border-gold hover:bg-gradient-to-br hover:from-[#112042] hover:to-[#1e366b] hover:shadow-[0_0_40px_rgba(212,175,55,0.4)] card-streak relative overflow-hidden">
                     <div>
-                      {/* Top Node & Year Pill */}
                       <div className="flex items-center justify-between mb-6">
                         <div
                           className="w-14 h-14 rounded-2xl flex items-center justify-center text-navy-deep shadow-[0_0_25px_rgba(212,175,55,0.6)] transition-all duration-500 group-hover:scale-110"
@@ -197,6 +196,7 @@ function AboutPage() {
           </div>
         </div>
       </section>
+      */}
       {/* ━━━ CTA BANNER (COMMENTED OUT AS REQUESTED) ━━━ */}
       {/* 
       <section className="relative overflow-hidden py-24 bg-navy-deep text-primary-foreground border-t border-white/10">
