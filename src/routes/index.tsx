@@ -438,7 +438,7 @@ function Index() {
       */}
 
       {/* ━━━ [PREMIUM 50/50 FEATURE SECTION]: HOW WE DELIVER (COMMENTED OUT AS REQUESTED) ━━━ */}
-      {/*
+      {false && (
       <section className="relative py-28 bg-gradient-to-br from-[#0c162c] via-[#0f1d3b] to-[#172a54] text-primary-foreground overflow-hidden border-y border-gold/30">
         <div
           className="absolute inset-0 opacity-30 pointer-events-none"
@@ -575,7 +575,7 @@ function Index() {
           </div>
         </div>
       </section>
-      */}
+      )}
 
       {/* ━━━ SECTION 5: WHY TPN TECH (DARK NAVY GRADIENT) ━━━ */}
       <section className="relative py-28 bg-gradient-to-br from-[#091124] via-[#0e1b38] to-[#091124] text-primary-foreground overflow-hidden border-b border-white/5">
