@@ -199,7 +199,8 @@ function ServiceDetail() {
         </div>
       </section>
 
-      {/* ━━━ SECTION 3: CAPABILITIES (DARK NAVY GRADIENT CARDS) ━━━ */}
+      {/* ━━━ SECTION 3: CAPABILITIES (COMMENTED OUT AS REQUESTED) ━━━ */}
+      {false && (
       <section className="bg-gradient-to-br from-[#091124] via-[#0e1b38] to-[#091124] py-28 text-primary-foreground border-b border-white/10 relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-20 pointer-events-none"
@@ -237,6 +238,7 @@ function ServiceDetail() {
           </div>
         </div>
       </section>
+      )}
 
       {/* ━━━ SECTION 4: DELIVERY PROCESS (COMMENTED OUT AS REQUESTED) ━━━ */}
       {/* 
