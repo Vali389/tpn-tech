@@ -501,31 +501,31 @@ function Index() {
                   <div className="inline-flex items-center gap-3 mb-4">
                     <span className="w-8 h-px bg-gold" />
                     <p className="text-gold text-xs font-semibold tracking-[0.25em] uppercase">
-                      Proven Deliverable Model
+                      How We Deliver
                     </p>
                   </div>
 
                   <h2 className="text-4xl md:text-5xl font-semibold leading-[1.1] text-primary-foreground mb-6">
-                    AI Precision Sourcing Built for Critical Mandates
+                    AI Precision Sourcing Built for Speed
                   </h2>
 
                   <p className="text-primary-foreground/85 text-base md:text-lg leading-relaxed mb-8">
-                    We pair deep learning skill-graph algorithms with vertical recruiter pods to deliver pre-screened, audit-ready technical candidates in record time.
+                    We pair intelligent matching algorithms with specialist recruiters to deliver pre-screened, high-caliber talent in record time.
                   </p>
 
                   <div className="space-y-4 mb-10">
                     {[
                       {
-                        title: "Skill-Graph Taxonomy Verification",
-                        desc: "Candidates are benchmarked across 40+ domain competencies prior to employer submission.",
+                        title: "Skill-Graph Vetting",
+                        desc: "Candidates are benchmarked and verified across technical skills before submission.",
                       },
                       {
-                        title: "Audit-Ready Compliance & Payroll",
-                        desc: "Full statutory background checks, right-to-work validation, and seamless global EOR rollout.",
+                        title: "Compliance & Verification",
+                        desc: "Background checks, reference verification, and right-to-work validation handled end-to-end.",
                       },
                       {
-                        title: "Dedicated Partner Delivery Lead",
-                        desc: "A single senior owner who understands your technical stack and guarantees 48-hour SLAs.",
+                        title: "Dedicated Recruiter Lead",
+                        desc: "A named partner who understands your requirements and guarantees 48-hour SLAs.",
                       },
                     ].map((feat, i) => (
                       <div

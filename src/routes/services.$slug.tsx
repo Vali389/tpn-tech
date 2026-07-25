@@ -238,7 +238,8 @@ function ServiceDetail() {
         </div>
       </section>
 
-      {/* ━━━ SECTION 4: DELIVERY PROCESS (HIGH-CONTRAST GOLD STEPPER CARDS ON DARK NAVY) ━━━ */}
+      {/* ━━━ SECTION 4: DELIVERY PROCESS (COMMENTED OUT AS REQUESTED) ━━━ */}
+      {/* 
       <section className="py-28 bg-navy-deep relative overflow-hidden border-b border-white/10">
         <div
           className="absolute inset-0 opacity-20 pointer-events-none"
@@ -254,7 +255,6 @@ function ServiceDetail() {
           />
 
           <div className="relative mt-20">
-            {/* Glowing horizontal gold connecting line */}
             <div className="hidden lg:block absolute top-[36px] left-[8%] right-[8%] h-0.5 bg-gradient-to-r from-gold/20 via-gold to-gold/20 z-0 shadow-[0_0_15px_rgba(212,175,55,0.6)]" />
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 relative z-10">
@@ -287,6 +287,7 @@ function ServiceDetail() {
           </div>
         </div>
       </section>
+      */}
 
       {/* ━━━ SECTION 5: CANDIDATE VETTING MATRIX (LIGHT CEMENT BG) ━━━ */}
       <section className="py-28 bg-[color:var(--muted)] border-b border-border">

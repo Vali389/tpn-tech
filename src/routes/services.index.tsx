@@ -189,7 +189,8 @@ function ServicesPage() {
         </div>
       </section>
 
-      {/* ━━━ SECTION 3: SERVICE SLA & DELIVERY GUARANTEE (DARK NAVY GRADIENT) ━━━ */}
+      {/* ━━━ SECTION 3: SERVICE SLA & DELIVERY GUARANTEE (COMMENTED OUT AS REQUESTED) ━━━ */}
+      {/* 
       <section className="py-24 bg-gradient-to-br from-[#091124] via-[#0e1b38] to-[#091124] text-primary-foreground border-b border-white/10">
         <div className="mx-auto max-w-7xl px-5">
           <SectionHeading
@@ -220,6 +221,7 @@ function ServicesPage() {
           </div>
         </div>
       </section>
+      */}
 
       {/* ━━━ SECTION 4: FREQUENTLY ASKED SERVICES QUESTIONS (COMMENTED OUT AS REQUESTED) ━━━ */}
       {/* 
