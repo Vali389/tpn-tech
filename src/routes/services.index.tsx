@@ -268,7 +268,8 @@ function ServicesPage() {
       </section>
       */}
 
-      {/* ━━━ SECTION 5: CTA BANNER ━━━ */}
+      {/* ━━━ SECTION 5: CTA BANNER (COMMENTED OUT AS REQUESTED) ━━━ */}
+      {/* 
       <section className="relative overflow-hidden">
         <img
           src={bannerCareers}
@@ -306,6 +307,7 @@ function ServicesPage() {
           </div>
         </div>
       </section>
+      */}
     </div>
   );
 }

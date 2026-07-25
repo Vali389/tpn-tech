@@ -197,7 +197,8 @@ function AboutPage() {
           </div>
         </div>
       </section>
-      {/* ━━━ CTA BANNER ━━━ */}
+      {/* ━━━ CTA BANNER (COMMENTED OUT AS REQUESTED) ━━━ */}
+      {/* 
       <section className="relative overflow-hidden py-24 bg-navy-deep text-primary-foreground border-t border-white/10">
         <img
           src={bannerCareers}
@@ -233,6 +234,7 @@ function AboutPage() {
           </Reveal>
         </div>
       </section>
+      */}
     </div>
   );
 }

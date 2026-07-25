@@ -21,6 +21,7 @@ export type Service = {
 };
 
 export const services: Service[] = [
+  /*
   {
     slug: "ai-recruitment",
     title: "AI Recruitment",
@@ -62,6 +63,7 @@ export const services: Service[] = [
       "Fewer, better interviews per hire",
     ],
   },
+  */
   {
     slug: "it-technology-staffing",
     title: "IT & Technology Staffing",

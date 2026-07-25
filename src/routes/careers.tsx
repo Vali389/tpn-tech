@@ -51,6 +51,8 @@ function CareersPage() {
         description="We hire recruiters who like the craft and engineers who like the problem. Everyone here works on hiring outcomes, not submission counts."
       />
 
+      {/* ━━━ LIFE AT TPN TECH (COMMENTED OUT AS REQUESTED) ━━━ */}
+      {/* 
       <section className="py-24 bg-[color:var(--muted)] border-b border-border">
         <div className="mx-auto max-w-7xl px-5">
           <SectionHeading
@@ -73,6 +75,7 @@ function CareersPage() {
           </div>
         </div>
       </section>
+      */}
 
       {/* ORIGINAL OPEN ROLES SECTION */}
       <section className="relative overflow-hidden py-24">
