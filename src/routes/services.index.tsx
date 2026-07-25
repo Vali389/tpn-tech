@@ -114,10 +114,10 @@ function ServicesPage() {
             <span className="w-10 h-px bg-gold" />
           </div>
           <h1 className="text-primary-foreground text-4xl md:text-6xl font-semibold leading-[1.1] max-w-4xl mx-auto">
-            End-to-End Capabilities That Drive <span className="gold-text italic">Outcomes</span>
+            Hire the Right People, <span className="gold-text italic">Faster</span>
           </h1>
           <p className="mt-6 text-primary-foreground/80 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-            From a single specialist engineer to an entire contingent workforce — every engagement runs on the same AI-plus-human model.
+            TPN Tech blends an AI matching engine with specialist recruiters. Machines search, score and rank. Our people interview, verify and decide. You meet a shortlist worth your time.
           </p>
         </div>
       </section>
