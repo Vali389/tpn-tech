@@ -885,7 +885,8 @@ function Index() {
       </section>
       */}
 
-      {/* ━━━ SECTION 11: CTA BANNER ━━━ */}
+      {/* ━━━ SECTION 11: CTA BANNER (COMMENTED OUT AS REQUESTED) ━━━ */}
+      {/* 
       <section className="relative overflow-hidden">
         <img
           src={bannerCareers}
@@ -930,6 +931,7 @@ function Index() {
           </div>
         </div>
       </section>
+      */}
     </div>
   );
 }
