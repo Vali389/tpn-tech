@@ -652,10 +652,10 @@ function Index() {
 
               <div className="mt-10 grid gap-6 sm:grid-cols-2">
                 {[
-                  { icon: BrainCircuit, title: "Skill-graph matching", body: "Every requirement becomes a structured skill graph, matched against a live pool instead of keyword-searched." },
-                  { icon: Gauge, title: "48-hour shortlists", body: "Sourcing and ranking happen in minutes, so recruiters spend their day interviewing rather than searching." },
-                  { icon: ShieldCheck, title: "Bias-controlled screening", body: "Structured scorecards keep early-stage evaluation consistent, auditable and defensible." },
-                  { icon: Target, title: "Human final call", body: "No profile reaches you without a specialist recruiter interview and a plain-English written brief." },
+                  { icon: BrainCircuit, title: "Skill-Graph Matching", body: "Smart algorithms match candidate skills against your exact role requirements." },
+                  { icon: Gauge, title: "48-Hour Shortlists", body: "Instant AI ranking so you get pre-vetted candidate profiles in 48 hours." },
+                  { icon: ShieldCheck, title: "Bias-Controlled Screening", body: "Structured, auditable candidate scorecards for consistent, fair evaluation." },
+                  { icon: Target, title: "Human Final Call", body: "Every candidate is interviewed and verified by a specialist recruiter." },
                 ].map((pillar, i) => (
                   <Reveal key={pillar.title} delay={i * 110}>
                     <div className="group rounded-2xl border border-white/10 bg-[#0c162c] p-6 transition-all duration-500 ease-[var(--ease-premium)] hover:-translate-y-1.5 hover:border-gold/50 hover:bg-[#121f3d] shadow-lg">
@@ -663,7 +663,7 @@ function Index() {
                         <pillar.icon className="h-5 w-5 text-gold" />
                       </div>
                       <h3 className="text-lg text-primary-foreground font-semibold mb-2">{pillar.title}</h3>
-                      <p className="text-sm leading-relaxed text-primary-foreground/70">{pillar.body}</p>
+                      <p className="text-xs md:text-sm leading-relaxed text-primary-foreground/75">{pillar.body}</p>
                     </div>
                   </Reveal>
                 ))}
