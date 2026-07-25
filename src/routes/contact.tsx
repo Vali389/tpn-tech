@@ -2,7 +2,7 @@ import { useState, type FormEvent } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { Clock, Mail, MapPin, Phone, Send } from "lucide-react";
 import { toast } from "sonner";
-import bannerContact from "@/assets/banner-contact.jpg";
+import bannerContact from "@/assets/contact-hero-image.jpg";
 import { PageBanner } from "@/components/site/PageBanner";
 import { Reveal } from "@/components/site/Reveal";
 import { SectionHeading } from "@/components/site/SectionHeading";
