@@ -337,7 +337,8 @@ function Index() {
         </div>
       </section>
 
-      {/* ━━━ SECTION 3: HOW WE PARTNER (HIGH-CONTRAST GOLD & DARK GLASS STEPPER) ━━━ */}
+      {/* ━━━ SECTION 3: HOW WE PARTNER (COMMENTED OUT AS REQUESTED) ━━━ */}
+      {/* 
       <section className="py-28 bg-navy-deep relative overflow-hidden border-t border-white/10">
         <div
           className="absolute inset-0 opacity-20 pointer-events-none"
@@ -353,7 +354,6 @@ function Index() {
           />
 
           <div className="relative mt-20">
-            {/* Glowing horizontal gold connecting line */}
             <div className="hidden lg:block absolute top-[36px] left-[8%] right-[8%] h-0.5 bg-gradient-to-r from-gold/20 via-gold to-gold/20 z-0 shadow-[0_0_15px_rgba(212,175,55,0.6)]" />
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 relative z-10">
@@ -387,8 +387,10 @@ function Index() {
           </div>
         </div>
       </section>
+      */}
 
-      {/* ━━━ SECTION 4: SPECIALIST TALENT (MINIMAL GLASS CARDS) ━━━ */}
+      {/* ━━━ SECTION 4: SPECIALIST TALENT (COMMENTED OUT AS REQUESTED) ━━━ */}
+      {/* 
       <section className="relative py-28 bg-[color:var(--muted)] border-y border-border">
         <div className="mx-auto max-w-7xl px-5">
           <SectionHeading
@@ -433,6 +435,7 @@ function Index() {
           </div>
         </div>
       </section>
+      */}
 
       {/* ━━━ [PREMIUM 50/50 FEATURE SECTION]: LEFT HIGH-IMPACT GLASS IMAGE + RIGHT ENTERPRISE CONTENT ━━━ */}
       <section className="relative py-28 bg-gradient-to-br from-[#0c162c] via-[#0f1d3b] to-[#172a54] text-primary-foreground overflow-hidden border-y border-gold/30">
