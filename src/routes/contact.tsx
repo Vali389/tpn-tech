@@ -144,71 +144,48 @@ function ContactPage() {
                 </p>
 
                 <div className="grid gap-6 sm:grid-cols-2">
-                  <label className="block">
-                    <span className="font-mono text-xs font-semibold tracking-wider text-gold uppercase">
-                      Full Name *
-                    </span>
-                    <input
-                      required
-                      name="name"
-                      placeholder="e.g. Sarah Jenkins"
-                      className={`mt-2 ${inputClass}`}
-                    />
-                  </label>
+                  <input
+                    required
+                    name="name"
+                    placeholder="Enter full name *"
+                    className={inputClass}
+                  />
 
-                  <label className="block">
-                    <span className="font-mono text-xs font-semibold tracking-wider text-gold uppercase">
-                      Work Email *
-                    </span>
-                    <input
-                      required
-                      type="email"
-                      name="email"
-                      placeholder="sarah@company.com"
-                      className={`mt-2 ${inputClass}`}
-                    />
-                  </label>
+                  <input
+                    required
+                    type="email"
+                    name="email"
+                    placeholder="Enter work email *"
+                    className={inputClass}
+                  />
 
-                  <label className="block">
-                    <span className="font-mono text-xs font-semibold tracking-wider text-gold uppercase">
-                      Company Name
-                    </span>
-                    <input
-                      name="company"
-                      placeholder="e.g. Acme Corporation"
-                      className={`mt-2 ${inputClass}`}
-                    />
-                  </label>
+                  <input
+                    name="company"
+                    placeholder="Enter company name"
+                    className={inputClass}
+                  />
 
-                  <label className="block">
-                    <span className="font-mono text-xs font-semibold tracking-wider text-gold uppercase">
-                      Service Requirement
-                    </span>
-                    <select name="service" className={`mt-2 ${inputClass}`} defaultValue="">
-                      <option value="" className="bg-[#0c162c] text-primary-foreground">
-                        Select a service model
+                  <select name="service" className={inputClass} defaultValue="">
+                    <option value="" className="bg-[#0c162c] text-primary-foreground">
+                      Select a service requirement
+                    </option>
+                    {services.map((s) => (
+                      <option key={s.slug} value={s.slug} className="bg-[#0c162c] text-primary-foreground">
+                        {s.title}
                       </option>
-                      {services.map((s) => (
-                        <option key={s.slug} value={s.slug} className="bg-[#0c162c] text-primary-foreground">
-                          {s.title}
-                        </option>
-                      ))}
-                    </select>
-                  </label>
+                    ))}
+                  </select>
                 </div>
 
-                <label className="mt-6 block">
-                  <span className="font-mono text-xs font-semibold tracking-wider text-gold uppercase">
-                    How Can We Help? *
-                  </span>
+                <div className="mt-6">
                   <textarea
                     required
                     name="message"
                     rows={4}
-                    placeholder="Describe the roles, required tech stack, timeline, or headcount goals..."
-                    className={`mt-2 resize-none ${inputClass}`}
+                    placeholder="Enter your message or talent requirements *"
+                    className={`resize-none ${inputClass}`}
                   />
-                </label>
+                </div>
 
                 <button
                   type="submit"
