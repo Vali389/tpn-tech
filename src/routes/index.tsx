@@ -839,7 +839,8 @@ function Index() {
         </div>
       </section>
 
-      {/* ━━━ SECTION 10: FREQUENTLY ASKED QUESTIONS (DARK NAVY ACCORDION) ━━━ */}
+      {/* ━━━ SECTION 10: FREQUENTLY ASKED QUESTIONS (COMMENTED OUT AS REQUESTED) ━━━ */}
+      {/* 
       <section className="relative py-28 bg-navy-deep text-primary-foreground border-t border-white/10 overflow-hidden">
         <div className="relative mx-auto max-w-5xl px-5 z-10">
           <SectionHeading
@@ -882,6 +883,7 @@ function Index() {
           </div>
         </div>
       </section>
+      */}
 
       {/* ━━━ SECTION 11: CTA BANNER ━━━ */}
       <section className="relative overflow-hidden">
