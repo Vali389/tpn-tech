@@ -289,7 +289,8 @@ function ServiceDetail() {
       </section>
       */}
 
-      {/* ━━━ SECTION 5: CANDIDATE VETTING MATRIX (LIGHT CEMENT BG) ━━━ */}
+      {/* ━━━ SECTION 5: CANDIDATE VETTING MATRIX (COMMENTED OUT AS REQUESTED) ━━━ */}
+      {/* 
       <section className="py-28 bg-[color:var(--muted)] border-b border-border">
         <div className="mx-auto max-w-7xl px-5">
           <SectionHeading
@@ -322,8 +323,10 @@ function ServiceDetail() {
           </div>
         </div>
       </section>
+      */}
 
-      {/* ━━━ SECTION 6: FLEXIBLE SOURCING & ENGAGEMENT MODELS (DARK NAVY GRADIENT) ━━━ */}
+      {/* ━━━ SECTION 6: FLEXIBLE SOURCING & ENGAGEMENT MODELS (COMMENTED OUT AS REQUESTED) ━━━ */}
+      {/* 
       <section className="py-28 bg-gradient-to-br from-[#091124] via-[#0e1b38] to-[#091124] text-primary-foreground border-b border-white/10 relative overflow-hidden">
         <div className="mx-auto max-w-7xl px-5 relative z-10">
           <SectionHeading
@@ -379,6 +382,7 @@ function ServiceDetail() {
           </div>
         </div>
       </section>
+      */}
 
       {/* ━━━ SECTION 7: RELATED SERVICES (DARK NAVY) ━━━ */}
       <section className="bg-navy-deep py-28 border-t border-white/10 text-primary-foreground">
@@ -400,7 +404,8 @@ function ServiceDetail() {
         </div>
       </section>
 
-      {/* ━━━ SECTION 8: CTA BANNER ━━━ */}
+      {/* ━━━ SECTION 8: CTA BANNER (COMMENTED OUT AS REQUESTED) ━━━ */}
+      {/* 
       <section className="relative overflow-hidden">
         <img
           src={bannerCareers}
@@ -443,6 +448,7 @@ function ServiceDetail() {
           </div>
         </div>
       </section>
+      */}
     </div>
   );
 }
