@@ -221,7 +221,8 @@ function ServicesPage() {
         </div>
       </section>
 
-      {/* ━━━ SECTION 4: FREQUENTLY ASKED SERVICES QUESTIONS (LIGHT CEMENT) ━━━ */}
+      {/* ━━━ SECTION 4: FREQUENTLY ASKED SERVICES QUESTIONS (COMMENTED OUT AS REQUESTED) ━━━ */}
+      {/* 
       <section className="py-24 bg-[color:var(--muted)] border-b border-border">
         <div className="mx-auto max-w-4xl px-5">
           <SectionHeading
@@ -263,6 +264,7 @@ function ServicesPage() {
           </div>
         </div>
       </section>
+      */}
 
       {/* ━━━ SECTION 5: CTA BANNER ━━━ */}
       <section className="relative overflow-hidden">

@@ -739,7 +739,8 @@ function Index() {
         </div>
       </section>
 
-      {/* ━━━ SECTION 8: AUTO-SCROLLING LOGO MARQUEE (LIGHT SECTION WITH WHITE CARDS + DARK NAVY HOVER) ━━━ */}
+      {/* ━━━ SECTION 8: AUTO-SCROLLING LOGO MARQUEE (COMMENTED OUT AS REQUESTED) ━━━ */}
+      {/* 
       <section className="py-16 bg-[color:var(--muted)] border-y border-border overflow-hidden relative">
         <div className="mx-auto max-w-7xl px-5 mb-8 text-center">
           <p className="text-xs md:text-sm font-mono font-semibold tracking-[0.3em] uppercase text-navy">
@@ -767,6 +768,7 @@ function Index() {
           </div>
         </div>
       </section>
+      */}
 
       {/* ━━━ SECTION 9: CLIENT VOICES (SINGLE ROW 3-CARD SLIDING CAROUSEL WITH PREV ON VERY LEFT & NEXT ON VERY RIGHT) ━━━ */}
       <section className="relative py-28 bg-gradient-to-br from-[#f8fafc] via-[#f1f5f9] to-[#e2e8f0] overflow-hidden border-t border-border">

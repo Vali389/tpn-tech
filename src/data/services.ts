@@ -136,6 +136,7 @@ export const services: Service[] = [
     ],
     outcomes: ["Deployment in as little as 5 days", "Zero compliance overhead for you", "Flexible extension and exit terms"],
   },
+  /* ━━━ COMMENTED OUT SERVICES AS REQUESTED ━━━
   {
     slug: "executive-search",
     title: "Executive Search",
@@ -208,6 +209,7 @@ export const services: Service[] = [
     ],
     outcomes: ["Faster time-to-productivity", "Programs built on your real stack", "Measured competency outcomes"],
   },
+  */
 ];
 
 export const getService = (slug: string) => services.find((s) => s.slug === slug);
