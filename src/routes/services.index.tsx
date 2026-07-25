@@ -122,70 +122,76 @@ function ServicesPage() {
         </div>
       </section>
 
-      {/* ━━━ SECTION 2: SERVICES LIST (ALTERNATING LEFT/RIGHT LAYOUT - LIGHT CEMENT) ━━━ */}
-      <section className="py-24 bg-[color:var(--muted)] border-b border-border">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 space-y-24">
-          {services.map((service, index) => {
-            const Icon = serviceIcons[service.slug];
-            const isEven = index % 2 === 1;
+      {/* ━━━ SECTION 2: 2 EQUAL-SIZE PREMIUM SERVICE CARDS (SIDE-BY-SIDE GRID) ━━━ */}
+      <section className="py-24 bg-gradient-to-br from-[#091124] via-[#0e1b38] to-[#091124] text-primary-foreground border-b border-white/10">
+        <div className="mx-auto max-w-7xl px-5">
+          <div className="grid md:grid-cols-2 gap-8 items-stretch">
+            {services.map((service, index) => {
+              const Icon = serviceIcons[service.slug];
 
-            return (
-              <div
-                key={service.slug}
-                className={`grid lg:grid-cols-2 gap-14 items-center ${isEven ? "lg:[&>*:first-child]:order-2" : ""}`}
-              >
-                <Reveal delay={100}>
-                  <div className="relative">
-                    <img
-                      src={service.image}
-                      alt={service.title}
-                      className="rounded-2xl shadow-elegant object-cover w-full h-[440px]"
-                    />
-                    {Icon && (
-                      <div
-                        className="absolute -bottom-5 -left-5 w-20 h-20 rounded-2xl flex items-center justify-center shadow-gold transition-transform duration-500 hover:scale-110"
+              return (
+                <Reveal key={service.slug} delay={index * 120} className="h-full">
+                  <div className="group h-full flex flex-col justify-between rounded-2xl border-2 border-gold/40 bg-gradient-to-br from-[#0c162c] via-[#0f1d3b] to-[#172a54] p-8 shadow-xl backdrop-blur-xl transition-all duration-500 hover:border-gold hover:shadow-[0_0_40px_rgba(212,175,55,0.35)] hover:-translate-y-2 relative overflow-hidden">
+                    <div>
+                      {/* Hero Image inside Card */}
+                      <div className="relative mb-7 overflow-hidden rounded-xl h-56 border border-white/10">
+                        <img
+                          src={service.image}
+                          alt={service.title}
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#0c162c] via-transparent to-transparent" />
+                        {Icon && (
+                          <div
+                            className="absolute bottom-4 left-4 w-12 h-12 rounded-xl flex items-center justify-center shadow-[0_0_20px_rgba(212,175,55,0.6)]"
+                            style={{ background: "var(--gradient-gold)" }}
+                          >
+                            <Icon className="w-6 h-6 text-navy-deep stroke-[2.5]" />
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Tagline & Title */}
+                      <p className="text-gold text-xs font-semibold tracking-[0.25em] uppercase mb-2">
+                        {service.tagline}
+                      </p>
+                      <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-4 group-hover:text-gold transition-colors duration-300">
+                        {service.title}
+                      </h2>
+                      <p className="text-sm md:text-base text-primary-foreground/80 leading-relaxed mb-6">
+                        {service.summary}
+                      </p>
+
+                      {/* Capabilities Checklist */}
+                      <ul className="space-y-3 mb-8 pt-4 border-t border-white/10">
+                        {service.capabilities.map((cap, i) => (
+                          <li key={i} className="text-xs md:text-sm text-primary-foreground/85 flex items-start gap-2.5">
+                            <span className="text-gold mt-0.5 font-bold">◆</span>
+                            <span>
+                              <strong className="text-gold font-semibold">{cap.title}:</strong> {cap.body}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Bottom CTA Button */}
+                    <div className="pt-6 border-t border-white/10">
+                      <Link
+                        to="/services/$slug"
+                        params={{ slug: service.slug }}
+                        className="sheen-on-hover group inline-flex w-full items-center justify-center gap-3 rounded-full px-6 py-3.5 text-sm font-bold text-navy-deep shadow-gold transition-all duration-300 hover:scale-[1.02]"
                         style={{ background: "var(--gradient-gold)" }}
                       >
-                        <Icon className="w-9 h-9 text-navy-deep" />
-                      </div>
-                    )}
+                        Explore Service Details
+                        <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                      </Link>
+                    </div>
                   </div>
                 </Reveal>
-
-                <Reveal delay={200}>
-                  <div>
-                    <p className="text-gold text-xs font-semibold tracking-[0.3em] uppercase mb-3">
-                      {service.tagline}
-                    </p>
-                    <h2 className="text-4xl font-semibold text-navy mb-5 leading-tight">
-                      {service.title}
-                    </h2>
-                    <p className="text-muted-foreground text-lg mb-6">
-                      {service.summary}
-                    </p>
-
-                    <ul className="grid grid-cols-2 gap-4 mb-8">
-                      {service.capabilities.map((cap, i) => (
-                        <li key={i} className="text-sm text-foreground/80 flex items-start gap-2">
-                          <span className="text-gold mt-1">◆</span>
-                          {cap.title}
-                        </li>
-                      ))}
-                    </ul>
-
-                    <Link
-                      to="/services/$slug"
-                      params={{ slug: service.slug }}
-                      className="group inline-flex items-center gap-2 text-navy font-semibold border-b-2 border-gold pb-1 hover:gap-4 hover:text-gold transition-all"
-                    >
-                      Explore this service
-                      <ArrowRight className="h-4 w-4" />
-                    </Link>
-                  </div>
-                </Reveal>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </section>
 
