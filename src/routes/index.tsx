@@ -885,53 +885,42 @@ function Index() {
       </section>
       */}
 
-      {/* ━━━ SECTION 11: CTA BANNER (COMMENTED OUT AS REQUESTED) ━━━ */}
-      {/* 
-      <section className="relative overflow-hidden">
+      {/* ━━━ SECTION 11: CTA BANNER ━━━ */}
+      <section className="relative overflow-hidden py-24 bg-navy-deep text-primary-foreground border-t border-white/10">
         <img
           src={bannerCareers}
           alt=""
           aria-hidden="true"
           loading="lazy"
-          width={1920}
-          height={700}
-          className="h-[420px] w-full object-cover opacity-85"
+          className="h-[420px] w-full object-cover opacity-85 absolute inset-0 pointer-events-none"
         />
         <div className="absolute inset-0 bg-navy-deep/85" />
-        <div className="absolute inset-0 flex items-center">
-          <div className="mx-auto w-full max-w-4xl px-5 text-center">
-            <Reveal>
-              <h2 className="text-3xl text-primary-foreground sm:text-4xl">
-                Tell us the role. We will bring the shortlist.
-              </h2>
-            </Reveal>
-            <Reveal delay={120}>
-              <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-primary-foreground/70">
-                One calibration call is all we need to start. No retainer for your first search.
-              </p>
-            </Reveal>
-            <Reveal delay={220}>
-              <div className="mt-8 flex flex-wrap justify-center gap-4">
-                <Link
-                  to="/contact"
-                  className="sheen-on-hover group inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-navy-deep shadow-gold transition-all duration-300 hover:scale-[1.04] hover:-translate-y-0.5"
-                  style={{ background: "var(--gradient-gold)" }}
-                >
-                  Book a calibration call
-                  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                </Link>
-                <Link
-                  to="/careers"
-                  className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/25 px-7 py-3.5 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:border-gold hover:text-gold"
-                >
-                  I am looking for a job
-                </Link>
-              </div>
-            </Reveal>
-          </div>
+        <div className="relative mx-auto w-full max-w-4xl px-5 text-center z-10">
+          <Reveal>
+            <h2 className="text-3xl text-primary-foreground sm:text-4xl font-semibold">
+              Not sure which service you need?
+            </h2>
+          </Reveal>
+          <Reveal delay={120}>
+            <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-primary-foreground/80">
+              Describe the problem in a sentence. We will tell you whether it is a search, a contract pod or a
+              training gap — even if the answer is none of ours.
+            </p>
+          </Reveal>
+          <Reveal delay={220}>
+            <div className="mt-8 flex flex-wrap justify-center gap-4">
+              <Link
+                to="/contact"
+                className="sheen-on-hover group inline-flex items-center gap-2 rounded-full px-8 py-4 text-sm font-semibold text-navy-deep shadow-gold transition-all duration-300 hover:scale-[1.04]"
+                style={{ background: "var(--gradient-gold)" }}
+              >
+                Book a calibration call
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
+            </div>
+          </Reveal>
         </div>
       </section>
-      */}
     </div>
   );
 }
