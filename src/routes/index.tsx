@@ -636,8 +636,7 @@ function Index() {
         </div>
       </section>
 
-      {/* ━━━ SECTION 6: AI RECRUITMENT ENGINE (COMMENTED OUT AS REQUESTED) ━━━ */}
-      {/* 
+      {/* ━━━ SECTION 6: AI RECRUITMENT ENGINE (DARK NAVY) ━━━ */}
       <section className="relative overflow-hidden bg-navy-deep py-24 text-primary-foreground border-b border-white/5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(184,251,233,0.03),transparent_40%)] pointer-events-none" />
         <div className="relative mx-auto max-w-7xl px-5">
@@ -693,7 +692,6 @@ function Index() {
           </div>
         </div>
       </section>
-      */}
 
       {/* ━━━ SECTION 7: INDUSTRIES (DARK NAVY BUILDING BG) ━━━ */}
       <section className="relative overflow-hidden py-28 bg-navy-deep border-t border-white/10">
